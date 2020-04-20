@@ -1,0 +1,155 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  background-color: #FAFBFF;
+  color: #1B234A;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1B234A;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+
+button,
+input {
+  outline: none;
+  cursor: pointer;
+}
+
+.button {
+  display: block;
+  background: #40B3B7;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 16px;
+  color: #FFFFFF;
+  transition: 0.3s ease-in-out;
+  border: none;
+
+  &:hover {
+    transition: 0.3s ease-in-out;
+    opacity: 0.7;
+  }
+}
+
+//style for input
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='checkbox'],
+  input[type='radio'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='checkbox'],
+  input[type='radio'] {
+    --active: #40B3B7;;
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, .25);
+    --border: #A0A8C5;
+    --border-hover: #A0A8C5;
+    --background: #F3F6FB;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+  }
+}
+
+input[type='radio'] {
+  border: 2px solid var(--bc, var(--border));
+}
+
+input[type='radio']:checked {
+  --active: #40B3B7;;
+  border: 6px solid var(--bc);
+}
+
+input[type='checkbox'] {
+  border: 2px solid #A0A8C5;
+}
+
+input[type='checkbox']:checked {
+  position: relative;
+  --active: #40B3B7;
+  border: 10px solid var(--bc);
+  z-index: 10;
+
+  &:before {
+    content: url("../img/tick.svg");
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    z-index: 10;
+  }
+}
+
+/* Override defaults */
+input[type='checkbox']:checked,
+input[type='radio']:checked {
+  --b: var(--active);
+  --bc: var(--active);
+}
+
+/* Apply another border color on hover if not checked & not disabled */
+input[type='checkbox']:not(:checked):not(:disabled):hover,
+input[type='radio']:not(:checked):not(:disabled):hover {
+
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  --focus: 2px rgba(39, 94, 254, .25);
+  outline: none;
+  transition: box-shadow .2s;
+}
+
+input[type='checkbox'] + label,
+input[type='radio'] + label {
+  display: inline-block;
+  vertical-align: top;
+  /* Additional styling */
+}
+
+input[type='checkbox']:disabled + label,
+input[type='radio']:disabled + label {
+  cursor: not-allowed;
+}

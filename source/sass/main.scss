@@ -1,0 +1,107 @@
+.patient-info {
+  margin: 116px auto 195px;
+  &__h1 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    margin: 0px 0 24px;
+  }
+
+  &__content {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 1px rgba(27, 35, 74, 0.15), 0px 4px 6px rgba(27, 35, 74, 0.06);
+    border-radius: 8px;
+    padding-bottom: 32px;
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+    padding: 27px 0 20px;
+  }
+
+  &__txt {
+    max-width: 700px;
+    margin: auto;
+    padding: 0 42px;
+  }
+
+  &__h2 {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 36px;
+    text-align: center;
+    margin: 32px 0 24px;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #616F97;
+    padding: 0 22px;
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    max-width: 285px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px 0;
+
+
+    &--coin {
+      border-left: 1px solid #36A1AF;
+      padding: 0 0 0 40px;
+      position: relative;
+      margin-left: 10px;
+
+      &:before {
+        content: url("../img/coin.svg");
+        position: absolute;
+        left: 17px;
+        top: 0;
+      }
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .patient-info {
+    margin: 16px auto 0px;
+
+    &__h1 {
+      font-size: 18px;
+      line-height: 26px;
+      margin: 0px 0 16px;
+      padding-left: 16px;
+    }
+
+    &__content {
+      padding-bottom: 28px;
+    }
+
+    &__img {
+      padding: 44px 13px 28.5px;
+      box-sizing: border-box;
+    }
+
+    &__txt {
+      padding: 0 30px;
+    }
+
+    &__h2 {
+      font-size: 22px;
+      line-height: 32px;
+      margin: 32px 0 16px;
+    }
+
+    &__description {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0;
+      margin-bottom: 32px;
+    }
+  }
+}
